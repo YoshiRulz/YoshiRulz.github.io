@@ -7,6 +7,7 @@ Name | [BCH rating](https://bettercodehub.com/)
 
  
 ***
+
 ***
 # Filler Content
 You never know when you might need a copy of Lorem Ipsum or the default GH Pages site contents.
