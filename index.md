@@ -1,3 +1,13 @@
+# My Projects
+Name | [BCH rating](https://bettercodehub.com/)
+--:|:--
+[JTysh](https://github.com/YoshiRulz/JTysh) | ![BCH compliance](https://bettercodehub.com/edge/badge/YoshiRulz/JTysh?branch=master)
+
+# Filler Content
+You never know when you might need a copy of Lorem Ipsum or the default GH Pages site contents.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/YoshiRulz/YoshiRulz.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
