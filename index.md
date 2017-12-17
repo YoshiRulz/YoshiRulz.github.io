@@ -1,9 +1,12 @@
 # My Projects
 ***
+I've made some things which you're free to use or tinker with (or just look at).
 
 Name | [BCH rating](https://bettercodehub.com/)
 --:|:--
 [JTysh](https://github.com/YoshiRulz/JTysh) | ![BCH compliance](https://bettercodehub.com/edge/badge/YoshiRulz/JTysh?branch=master)
+
+...And, of course, [this website](https://github.com/YoshiRulz/YoshiRulz.github.io).
 
  
 
