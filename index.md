@@ -24,7 +24,7 @@ GitHub Repo | Description
 [nlsh](https://github.com/YoshiRulz/nlsh) | An attempt to let Linux newbies use the shell without having to "memorize all those commands". May eventually be ported to Java (JTysh).
 [JTysh-NL](https://github.com/YoshiRulz/JTysh-NL) | See `nlsh`.
 
-And, of course, there's [this website](https://github.com/YoshiRulz/YoshiRulz.github.io).
+And, of course, there's [the website you're currently looking at](https://github.com/YoshiRulz/YoshiRulz.github.io).
 
  
 
