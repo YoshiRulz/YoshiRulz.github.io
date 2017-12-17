@@ -1,7 +1,11 @@
 # My Projects
+---
 Name | [BCH rating](https://bettercodehub.com/)
 --:|:--
 [JTysh](https://github.com/YoshiRulz/JTysh) | ![BCH compliance](https://bettercodehub.com/edge/badge/YoshiRulz/JTysh?branch=master)
+
+---
+---
 
 # Filler Content
 You never know when you might need a copy of Lorem Ipsum or the default GH Pages site contents.
