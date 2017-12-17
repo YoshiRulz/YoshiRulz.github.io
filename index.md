@@ -1,7 +1,7 @@
 # My Projects
 ---
 Name | [BCH rating](https://bettercodehub.com/)
---:|:--
+---|---
 [JTysh](https://github.com/YoshiRulz/JTysh) | ![BCH compliance](https://bettercodehub.com/edge/badge/YoshiRulz/JTysh?branch=master)
 
 ---
