@@ -4,11 +4,27 @@ I've made some things which you're free to use or tinker with (or just look at).
 
 GitHub Repo | Description | [BCH rating](https://bettercodehub.com/)
 --:|:--|:--
+[My dotfiles](https://github.com/YoshiRulz/dotfiles-plus) | Dotfiles, plus config I found myself copying a lot | N/A
 [Circulyr compiler](https://github.com/YoshiRulz/circulyrc) | "Compiler" for a new song lyric markdown, Circulyr | N/A (unfinished)
 [JTysh](https://github.com/YoshiRulz/JTysh) | An attempt at a (backwards-incompatible) Java shell | ![BCH compliance](https://bettercodehub.com/edge/badge/YoshiRulz/JTysh?branch=master)
 [*Rayman 2* TAS scripts](https://github.com/YoshiRulz/Rayman2-TAS-scripts) | I'm working towards a *Rayman 2* [TAS](http://tasvideos.org/WelcomeToTASVideos.html) (with [BizHawk](https://github.com/TASVideos/BizHawk)) | N/A (in Lua)
 
-...And, of course, [this website](https://github.com/YoshiRulz/YoshiRulz.github.io).
+There's also some unstarted projects:
+
+GitHub Repo | Description
+--:|:--
+D940a [device](https://github.com/YoshiRulz/android_device_blu_d940a)/[kernel](https://github.com/YoshiRulz/blu-kernel-d940a) | LineageOS 14.1 port for the Blu *Vivo 4.8 HD* (forked from the *Nexus 4*)
+[rsTux](https://github.com/YoshiRulz/rsTux) | Attempting to replace C w/ Rust in the Linux kernel (post-compile for now)
+
+And there are some I've left to gather dust:
+
+GitHub Repo | Description
+--:|:--
+[SciLib](https://github.com/YoshiRulz/SciLib) | Built to automate physics homework with dimensional analysis, there are similar libraries already (and they're probably better).
+[nlsh](https://github.com/YoshiRulz/nlsh) | An attempt to let Linux newbies use the shell without having to "memorize all those commands". May eventually be ported to Java (JTysh).
+[JTysh-NL](https://github.com/YoshiRulz/JTysh-NL) | See `nlsh`.
+
+And, of course, there's [this website](https://github.com/YoshiRulz/YoshiRulz.github.io).
 
  
 
