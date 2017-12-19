@@ -3,6 +3,12 @@
 
 @import "{{ site.theme }}";
 
+code {
+	background-color: #191919;
+	border: 1px solid #121212;
+	padding: 2px 4px;
+}
+
 .wrapper, #header > nav, section {
 	max-width: 750px;
 }
