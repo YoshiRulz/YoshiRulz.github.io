@@ -5,7 +5,7 @@ I've made some things which you're free to use or tinker with (or just look at).
 GitHub Repo | Description | [BCH rating](https://bettercodehub.com/)
 --:|:--|:--
 [My dotfiles](https://github.com/YoshiRulz/dotfiles-plus) | Dotfiles, plus config I found myself copying a lot | N/A
-[Circulyr compiler](https://github.com/YoshiRulz/circulyrc) | "Compiler" for a new song lyric markdown, Circulyr | N/A (unfinished)
+[Circulyr compiler](https://github.com/YoshiRulz/circulyrc) | "Compiler" for a new type of markdown for song lyrics, Circulyr | N/A (unfinished)
 [JTysh](https://github.com/YoshiRulz/JTysh) | An attempt at a (backwards-incompatible) Java shell | ![BCH compliance](https://bettercodehub.com/edge/badge/YoshiRulz/JTysh?branch=master)
 [*Rayman 2* TAS scripts](https://github.com/YoshiRulz/Rayman2-TAS-scripts) | I'm working towards a *Rayman 2* [TAS](http://tasvideos.org/WelcomeToTASVideos.html) (with [BizHawk](https://github.com/TASVideos/BizHawk)) | N/A (in Lua)
 
