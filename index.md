@@ -30,8 +30,8 @@ I'm also *technically* a contributor on these cool projects:
 
 User/Group | GitHub Repo | Description
 --:|--:|:--
-[TASVideos](http://tasvideos.org) | [BizHawk](https://github.com/TASVideos/BizHawk) | A multi-system emulator with advanced recording and scripting functionality.
-[Undertow Games](https://undertowgames.com) | [SCP:CB](https://github.com/Regalis11/scpcb) | A first-person horror game set in the *Secure Contain Protect* universe.
+[TASVideos](http://tasvideos.org) | [BizHawk](https://github.com/TASVideos/BizHawk) | Multi-system emulator with advanced recording and scripting functionality.
+[Undertow Games](https://undertowgames.com) | [SCP:CB](https://github.com/Regalis11/scpcb) | First-person horror game set in the *Secure Contain Protect* universe.
 
  
 
