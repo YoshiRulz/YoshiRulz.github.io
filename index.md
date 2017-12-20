@@ -51,6 +51,8 @@ User/Group | GitHub Repo | Description
 
 "*Nobody actually creates perfect code the first time around, except me. But there's only one of me.*" — Linus Torvalds
 
+(In the metadata of [xkcd#378](https://xkcd.com/378)) "*Real programmers set the universal constants at the start such that the universe evolves to contain the disk with the data they want.*" — Randall Monroe
+
 ## on Software Education
 ***
 "*You see, some people have a talent for programming. At ten to thirteen years old, typically, they're fascinated, and if they use a program, they want to know: 'How does it do this?' But when they ask the teacher, if it's proprietary, the teacher has to say: 'I'm sorry, it's a secret, we can't find out.' Which means education is forbidden. A proprietary program is the enemy of the spirit of education.*" — Richard Stallman
