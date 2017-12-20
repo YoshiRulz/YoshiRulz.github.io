@@ -40,9 +40,11 @@ User/Group | GitHub Repo | Description
 ***
 
 # Wisdom of the Ancients
+***
 "Some people have told me they don't think a fat penguin really embodies the grace of Linux, which just tells me they have never seen an angry penguin charging at them in excess of [160 km/h]. They'd be a lot more careful about what they say if they had." — Linus Torvalds
 
 ## on Programming
+***
 "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning." — Rick Cook
 
 "Your most unhappy customers are your greatest source of learning." — Bill Gates
@@ -50,11 +52,13 @@ User/Group | GitHub Repo | Description
 "Nobody actually creates perfect code the first time around, except me. But there's only one of me." — Linus Torvalds
 
 ## on Software Education
+***
 "You see, some people have a talent for programming. At ten to thirteen years old, typically, they're fascinated, and if they use a program, they want to know: 'How does it do this?' But when they ask the teacher, if it's proprietary, the teacher has to say: 'I'm sorry, it's a secret, we can't find out.' Which means education is forbidden. A proprietary program is the enemy of the spirit of education." — Richard Stallman
 
 "Programming is programming. If you get good at programming, it doesn't matter which language you learned it in, because you'll be able to do programming in any language. The hard part of programming is the same regardless of the language." — Richard Stallman
 
 ## on Free Software
+***
 "To have the choice between proprietary software packages, is being able to choose your master. Freedom means not having a master. And in the area of computing, freedom means not using proprietary software." — Richard Stallman
 
 "If the users don't control the program, the program controls the users." — Richard Stallman
