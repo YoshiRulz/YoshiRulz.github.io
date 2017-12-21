@@ -57,9 +57,9 @@ User/Group | GitHub Repo | Description
 
 ## on Software Education
 ***
-"*You see, some people have a talent for programming. At ten to thirteen years old, typically, they're fascinated, and if they use a program, they want to know: 'How does it do this?' But when they ask the teacher, if it's proprietary, the teacher has to say: 'I'm sorry, it's a secret, we can't find out.' Which means education is forbidden. A proprietary program is the enemy of the spirit of education.*" — Richard Stallman
-
 "*Programming is programming. If you get good at programming, it doesn't matter which language you learned it in, because you'll be able to do programming in any language. The hard part of programming is the same regardless of the language.*" — Richard Stallman
+
+"*You see, some people have a talent for programming. At ten to thirteen years old, typically, they're fascinated, and if they use a program, they want to know: 'How does it do this?' But when they ask the teacher, if it's proprietary, the teacher has to say: 'I'm sorry, it's a secret, we can't find out.' Which means education is forbidden. A proprietary program is the enemy of the spirit of education.*" — Richard Stallman
 
 ## on Free Software
 ***
