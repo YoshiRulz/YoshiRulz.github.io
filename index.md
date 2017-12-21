@@ -72,7 +72,7 @@ User/Group | GitHub Repo | Description
 ### on Windows
 "*We've done some good work, but all of these products become obsolete so fast... It will be some finite number of years, and I don't know the number — before our doom comes.*" — Bill Gates
 
-"*Microsoft isn't evil, they just make really crappy operating systems.*" — "*Really, I'm not out to destroy Microsoft. That will just be a completely unintentional side effect.*" — "*If Microsoft ever does applications for Linux it means I've won.*" — Linus Torvalds
+(On three separate occasions) "*Microsoft isn't evil, they just make really crappy operating systems.*" — "*Really, I'm not out to destroy Microsoft. That will just be a completely unintentional side effect.*" — "*If Microsoft ever does applications for Linux it means I've won.*" — Linus Torvalds
 
 "*It is unfortunate that he still has nonfree software in his computer. He needs to defenestrate it (which means either throw Windows out of the computer or throw the computer out of the window).*" — Richard Stallman
 
