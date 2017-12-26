@@ -27,12 +27,12 @@ GitHub Repo | Description
 
 And, of course, there's [the website you're currently looking at](https://github.com/YoshiRulz/YoshiRulz.github.io).
 
-I'm also *technically* a contributor on these cool projects:
+I'm also *technically* a contributor to these cool projects (star them to octocat heaven):
 
 User/Group | GitHub Repo | Description
 --:|--:|:--
 [TASVideos](http://tasvideos.org) | [BizHawk](https://github.com/TASVideos/BizHawk) | Multi-system emulator with advanced recording and scripting functionality.
-[Undertow Games](https://undertowgames.com) | [SCP:CB](https://github.com/Regalis11/scpcb) | First-person horror game set in the *Secure Contain Protect* universe.
+[Undertow Games](https://undertowgames.com) | [SCP:CB](https://github.com/Regalis11/scpcb) | First-person horror game set in the *Secure, Contain, Protect* universe.
 
  
 
