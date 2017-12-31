@@ -56,6 +56,8 @@ User/Group | GitHub Repo | Description
 
 (In the metadata of [xkcd#378](https://xkcd.com/378)) "*Real programmers set the universal constants at the start such that the universe evolves to contain the disk with the data they want.*" — Randall Monroe
 
+"*Any sufficiently advanced technology is indistinguishable from magic.*" — Arthur C. Clarke
+
 ## on Software Education
 ***
 "*Programming is programming. If you get good at programming, it doesn't matter which language you learned it in, because you'll be able to do programming in any language. The hard part of programming is the same regardless of the language.*" — Richard Stallman
