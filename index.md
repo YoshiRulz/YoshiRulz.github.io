@@ -79,6 +79,11 @@ User/Group | GitHub Repo | Description
 
 "*It is unfortunate that he still has nonfree software in his computer. He needs to defenestrate it (which means either throw Windows out of the computer or throw the computer out of the window).*" — Richard Stallman
 
+## on The "Nothing to Hide" Fallacy
+"*Sell not virtue to purchase wealth, nor Liberty to purchase power.*" — "*Those who would give up essential Liberty, to purchase a little temporary Safety, deserve neither [...]*" — Benjamin Franklin
+
+"*Qu'on me donne six lignes écrites de la main du plus honnête homme, j'y trouverai de quoi le faire pendre.*" ("If you give me six lines written by the hand of the most honest of men, I will find something in them which will hang him.") — Cardinal Richelieu (attributed)
+
  
 
 ***
