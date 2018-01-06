@@ -47,6 +47,10 @@ User/Group | GitHub Repo | Description
 ***
 "*Some people have told me they don't think a fat penguin really embodies the grace of Linux, which just tells me they have never seen an angry penguin charging at them in excess of [160 km/h]. They'd be a lot more careful about what they say if they had.*" — Linus Torvalds
 
+## on The Energy Revolution 
+***
+(When an interviewer noted "[A few years ago, you said electric vehicles could be competitive] people were laughing at you, now... not so much.") "*Okay.*" — Elon Musk
+
 ## on Programming
 ***
 "*Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.*" — Rick Cook
