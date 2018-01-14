@@ -67,7 +67,7 @@ var randomizeSelect = function(e) {
 };
 var randomizeRecursively = function(p, randColour) {
 	if (typeof randColour == "undefined") randColour = !d.gEBN("randomize-limit-colours")[0].checked;
-	for (let e of p.children) switch (e.tagName.toLowerCase()) {
+	for (let e of Array.from(p.children)) switch (e.tagName.toLowerCase()) {
 		case "input": randomizeInput(e, randColour); break;
 		case "select": randomizeSelect(e); break;
 		case "fieldset": if (e.id == "randomize") break;
