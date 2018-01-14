@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<meta charset="UTF-8">
+		<script src="script.js"></script>
+		<title>Vexillography tool</title>
+	</head>
+	<body>
+		<main id="view"></main>
+		<aside><header>Goal: <strike>allow the flags of every UN member and observer state to be made</strike> make a flag of Earth.</header><fieldset id="opts">
+
+			<label>Aspect ratio (width–length): <select name="aspect">
+				<option selected value="3-5">3:5</option>
+				<option value="1-2">1:2</option>
+				<option value="1-1">1:1</option>
+			</select></label><br>
+			<label>Primary design: <select name="design">
+				<optgroup label="Misc.">
+					<option value="field">Field</option>
+					<option value="quadrisection">Quadrisection</option>
+					<option value="nordic-cross">Nordic Cross</option>
+					<option value="cross">Cross</option>
+					<option value="saltire">Saltire</option>
+					<option value="pall">Pall</option>
+				</optgroup>
+				<optgroup label="Bend">
+					<option value="bend-d">Bend (dexter)</option>
+					<option value="bend-s">Bend sinister</option>
+					<option value="per-bend-d">Party per bend (dexter)</option>
+					<option value="per-bend-s">Party per bend sinister</option>
+				</optgroup>
+				<optgroup label="Horizontal bands">
+					<option value="bars">Bars</option>
+					<option value="h-duoband">Horizontal duoband</option>
+					<option value="h-triband">Fess / Horizontal triband</option>
+					<option value="h-tetraband">Horizontal tetraband</option>
+					<option value="h-pentaband">Horizontal pentaband</option>
+					<option value="h-hexaband">Horizontal hexaband</option>
+					<option value="h-heptaband">Horizontal heptaband</option>
+				</optgroup>
+				<optgroup label="Vertical bands">
+					<option selected value="v-duoband">Vertical duoband</option>
+					<option value="v-triband">Pale / Vertical triband</option>
+					<option value="v-tetraband">Vertical tetraband</option>
+				</optgroup>
+			</select></label><br>
+			<label>Add pattern: <select name="pattern">
+				<option selected value="bordure">Bordure</option>
+				<option value="canton">Canton</option>
+				<option value="chevron">Chevron</option>
+				<option value="frame">Frame (mask)</option>
+			</select></label> <button onclick="showPattern()" type="button">Add</button>
+
+			<fieldset hidden id="field"><legend>Field</legend>
+				<label>Fill: <input name="fill" type="color"></label><br>
+				<button data-vexaction="add-charge" type="button">Add charge</button>
+			</fieldset>
+
+			<fieldset hidden id="quadrisection"><legend>Quadrisection</legend>
+			</fieldset>
+
+			<fieldset hidden id="nordic-cross"><legend>Nordic Cross</legend>
+				<label>Field fill: <input name="fill" type="color"></label><br>
+				<label>Cross fill: <input name="fill" type="color"></label>
+			</fieldset>
+
+			<fieldset hidden id="cross"><legend>(Symmetric) Cross</legend>
+			</fieldset>
+
+			<fieldset hidden id="saltire"><legend>Saltire</legend>
+			</fieldset>
+
+			<fieldset hidden id="pall"><legend>Pall</legend>
+			</fieldset>
+
+			<fieldset hidden id="bend-d"><legend>Bend (dexter)</legend>
+			</fieldset>
+
+			<fieldset hidden id="bend-s"><legend>Bend sinister</legend>
+			</fieldset>
+
+			<fieldset hidden id="per-bend-d"><legend>Party per bend (dexter)</legend>
+			</fieldset>
+
+			<fieldset hidden id="per-bend-s"><legend>Party per bend sinister</legend>
+			</fieldset>
+
+			<fieldset hidden id="bars"><legend>Bars</legend>
+			</fieldset>
+
+			<fieldset hidden id="h-duoband"><legend>Horizontal duoband</legend>
+				<label>Band ratio: <select name="h-duoband-ratio">
+					<option value="1-1">1:1</option>
+					<optgroup label="thirds">
+						<option value="1-2">1:2</option>
+						<option value="2-1">2:1</option>
+					</optgroup>
+					<optgroup label="quarters">
+						<option value="1-3">1:3</option>
+						<option value="3-1">3:1</option>
+					</optgroup>
+					<optgroup label="fifths">
+						<option value="1-4">1:4</option>
+						<option selected value="2-3">2:3</option>
+						<option value="3-2">3:2</option>
+						<option value="4-1">4:1</option>
+					</optgroup>
+				</select></label><br>
+			</fieldset>
+
+			<fieldset hidden id="h-triband"><legend>Fess / Horizontal triband</legend>
+				<label>Band ratio: <select name="h-triband-ratio">
+					<option selected value="1-1">1:1:1</option>
+					<optgroup label="quarters">
+						<option value="1-1-2">1:1:2</option>
+						<option value="1-2-1">1:2:1</option>
+						<option value="2-1-1">2:1:1</option>
+					</optgroup>
+					<optgroup label="fifths">
+						<option value="1-1-3">1:1:3</option>
+						<option value="1-3-3">1:3:1</option>
+						<option value="3-1-1">3:1:1</option>
+						<option value="2-2-1">2:2:1</option>
+						<option value="2-1-2">2:1:2</option>
+						<option value="1-2-2">1:2:2</option>
+					</optgroup>
+				</select></label><br>
+			</fieldset>
+
+			<fieldset hidden id="h-tetraband"><legend>Horizontal tetraband</legend>
+			</fieldset>
+
+			<fieldset hidden id="h-pentaband"><legend>Horizontal pentaband</legend>
+			</fieldset>
+
+			<fieldset hidden id="h-hexaband"><legend>Horizontal hexaband</legend>
+			</fieldset>
+
+			<fieldset hidden id="h-heptaband"><legend>Horizontal heptaband</legend>
+			</fieldset>
+
+			<fieldset id="v-duoband"><legend>Vertical duoband</legend>
+				<label>Band ratio: <select name="v-duoband-ratio">
+					<option value="1-1">1:1</option>
+					<optgroup label="Thirds">
+						<option value="1-2">1:2</option>
+						<option value="2-1">2:1</option>
+					</optgroup>
+					<optgroup label="Quarters">
+						<option value="1-3">1:3</option>
+						<option value="3-1">3:1</option>
+					</optgroup>
+					<optgroup label="Fifths">
+						<option value="1-4">1:4</option>
+						<option selected value="2-3">2:3</option>
+						<option value="3-2">3:2</option>
+						<option value="4-1">4:1</option>
+					</optgroup>
+				</select></label><br>
+				<fieldset class="band" data-vexorder="1">
+					<legend>Hoist band</legend>
+					<label>Fill: <input name="fill" type="color" value="#003F7F"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="2"><legend>Fly band</legend>
+					<label>Fill: <input name="fill" type="color" value="#000000"></label>
+					<fieldset class="charge" data-vexcat="circle"><legend>Charge</legend>
+						<header>Type: Circle/arc (of identical symbols)</header>
+						<label>Count: <input max="15" min="2" name="count" step="1" type="number" value="7"></label><br>
+						<label>Fill: <input name="fill" type="color" value="#FFFFFF"></label><br>
+						<label>Shape: <select name="shape">
+							<option value="star-3">Star (3-pointed)</option>
+							<option value="star-4">Star (4-pointed)</option>
+							<option selected value="star-5">Star (5-pointed)</option>
+							<option value="star-pentagram">Pentagram</option>
+							<option value="star-6">Star (6-pointed)</option>
+							<option value="star-of-david">Star of david</option>
+							<option value="star-7">Star (7-pointed)</option>
+						</select></label><br>
+						<label>Keep upright: <input name="keep-upright" type="checkbox" value="Car"></label><br>
+						<label>Subtended angle: <input max="360" min="15" name="angle" step="15" type="number" value="360"></label><br>
+						<label>Rotation (of arc): <input max="360" min="0" name="rotation" step="15" type="number" value="0"></label><br>
+						<button data-vexaction="add-charge" type="button">Add overlaid charge</button>
+					</fieldset>
+				</fieldset>
+			</fieldset>
+
+			<fieldset hidden id="v-triband"><legend>Pale / Vertical triband</legend>
+				<label>Band ratio: <select name="v-triband-ratio">
+					<option selected value="1-1">1:1:1</option>
+					<optgroup label="Quarters">
+						<option value="1-1-2">1:1:2</option>
+						<option value="1-2-1">1:2:1</option>
+						<option value="2-1-1">2:1:1</option>
+					</optgroup>
+					<optgroup label="Fifths">
+						<option value="1-1-3">1:1:3</option>
+						<option value="1-3-3">1:3:1</option>
+						<option value="3-1-1">3:1:1</option>
+						<option value="2-2-1">2:2:1</option>
+						<option value="2-1-2">2:1:2</option>
+						<option value="1-2-2">1:2:2</option>
+					</optgroup>
+				</select></label><br>
+				<fieldset class="band" data-vexorder="1">
+					<legend>Hoist band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="2">
+					<legend>Center band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="3">
+					<legend>Fly band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+			</fieldset>
+
+			<fieldset hidden id="v-tetraband"><legend>Vertical tetraband</legend>
+			</fieldset>
+
+			<fieldset hidden id="bordure"><legend>Bordure</legend>
+				<button onclick="hideSection('bordure')" type="button">Remove</button><br>
+				<label>Shape: <select name="frame-shape">
+					<option value="isosceles">Isosceles triangle</option>
+					<option selected value="isosceles-inv">Isosceles triangle (inverted)</option>
+				</select></label><br>
+				<label>Fill: <input name="fill" type="color"></label>
+			</fieldset>
+
+			<fieldset hidden id="canton"><legend>Canton</legend>
+				<button onclick="hideSection('canton')" type="button">Remove</button>
+				<fieldset class="canton-content"></fieldset><br>
+				<label>Fill: <input name="fill" type="color"></label>
+			</fieldset>
+
+			<fieldset id="chevron"><legend>Chevron</legend>
+				<button onclick="hideSection('chevron')" type="button">Remove</button><br>
+				<label>Width: <select name="chevron-width">
+					<option value="8">2/3</option>
+					<option value="6">1/2</option>
+					<option selected value="4">1/3</option>
+					<option value="3">1/4</option>
+				</select></label><br>
+				<fieldset class="fimbriation"><legend>Fimbriation</legend>
+					<input disabled hidden name="fimbriation-type" type="text" value="thin">
+					<button onclick="removeSectionChild('chevron', 'fimbriation')" type="button">Remove</button>
+					<header>Thickness: Thin</header>
+					<label>Fill: <input name="fill" type="color" value="#3F9F3F"></label>
+				</fieldset>
+				<label>Fill: <input name="fill" type="color" value="#1F7F1F"></label>
+			</fieldset>
+
+			<fieldset hidden id="frame"><legend>Frame (mask)</legend>
+				<button onclick="hideSection('frame')" type="button">Remove</button><br>
+				<label>Shape: <select name="frame-shape">
+					<option value="isosceles">Isosceles triangle</option>
+					<option selected value="isosceles-inv">Isosceles triangle (inverted)</option>
+				</select></label><br>
+				<label>Fill: <input name="fill" type="color"></label>
+			</fieldset>
+
+			<fieldset id="randomize"><legend>Randomize</legend>
+				<label>Also change primary design: <input name="randomize-design" type="checkbox"></label><br>
+				<label>Only use "flag colours": <input checked name="randomize-limit-colours" type="checkbox"></label><br>
+				<button id="randomize-button" onclick="randomizeAll()" onmouseover="randomizeButton()" onmouseout="randomizeButton()" type="button"></button>
+			</fieldset>
+
+		</fieldset></aside>
+		<footer hidden>
+			<div id="template-canton-content-add">
+				<button class="canton-content" type="button">Set canton type to:</button>
+				<select name="canton-content-type">
+					<option selected value="charge">Charge</option>
+					<option value="flag">Flag</option>
+				</select>
+			</div>
+			<div id="template-canton-content-charge">
+				<fieldset class="canton-content"><legend>Charge</legend>
+					<input disabled hidden name="canton-content-type" type="text" value="charge">
+					<button type="button">Remove</button>
+					<header>Type: Charge</header>
+					<p>TODO charge</p>
+				</fieldset>
+			</div>
+			<div id="template-canton-content-flag">
+				<fieldset class="canton-content"><legend>Flag</legend>
+					<input disabled hidden name="canton-content-type" type="text" value="flag">
+					<button type="button">Remove</button>
+					<header>Type: Flag</header>
+					<label>Flag: <select name="flag" selected="n-gb">
+						<option value="n-gb">Union Jack (Flag of the UK)</option>
+						<option value="n-lr">Flag of Liberia</option>
+					</select></label>
+				</fieldset>
+			</div>
+
+			<div id="template-fimbriation-add">
+				<button class="fimbriation" type="button">Add fimbriation</button>
+				<select name="fimbriation-type">
+					<option selected value="thin">Thin</option>
+					<option value="thick">Thick</option>
+				</select>
+			</div>
+			<div id="template-fimbriation-thick">
+				<fieldset class="fimbriation"><legend>Fimbriation</legend>
+					<input disabled hidden name="fimbriation-type" type="text" value="thick">
+					<button type="button">Remove</button>
+					<header>Thickness: Thick</header>
+					<label>Fill: <input name="fill" type="color"></label>
+				</fieldset>
+			</div>
+			<div id="template-fimbriation-thin">
+				<fieldset class="fimbriation"><legend>Fimbriation</legend>
+					<input disabled hidden name="fimbriation-type" type="text" value="thin">
+					<button type="button">Remove</button>
+					<header>Thickness: Thin</header>
+					<label>Fill: <input name="fill" type="color"></label>
+				</fieldset>
+			</div>
+		</footer>
+
+		<script>
+		for (let tag of ["input", "select"]) for (let e of d.gEBT(tag)) {
+			e.onchange = updateView;
+			e.onclick = updateView;
+			e.onkeyup = updateView;
+		}
+		let design = d.gEBN("design")[0];
+		design.onchange = updateDesign;
+		design.onclick = updateDesign;
+		design.onkeyup = updateDesign;
+
+		randomizeButton();
+		removeSectionChildIntern("canton", "canton-content");
+		updateView();
+		</script>
+	</body>
+</html>

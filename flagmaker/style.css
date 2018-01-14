@@ -1,0 +1,57 @@
+* {
+	font-family: "Noto Sans", Calibri, sans-serif;
+}
+input[type=checkbox], input[type=color] {
+	border: none;
+	padding: 0;
+	position: relative;
+	top: 0.25rem;
+}
+input[type=number] {
+	width: 3em;
+}
+
+body {
+	display: flex;
+	flex-flow: row nowrap;
+	height: 100vh;
+	margin: 0;
+}
+
+main {
+	align-items: center;
+	display: flex;
+	flex: 1;
+	flex-flow: column nowrap;
+	justify-content: center;
+	margin-left: 0.25rem;
+}
+svg {
+	border: 2px dashed gray;
+}
+
+aside {
+	margin: 0.25rem;
+	overflow-y: scroll;
+	width: 25rem;
+}
+fieldset {
+	background-color: #DFEFFF;
+	padding: 0.25rem;
+}
+fieldset fieldset {
+	background-color: #DFFFDF;
+}
+fieldset fieldset fieldset {
+	background-color: #DFEFFF;
+	margin-bottom: 0.5rem;
+}
+fieldset fieldset fieldset fieldset {
+	background-color: #DFFFDF;
+	margin-bottom: 0.5rem;
+}
+
+footer, input[disabled] {
+	display: none;
+	visibility: hidden;
+}
