@@ -109,7 +109,7 @@ var addSectionChildIntern = function(sectionID, childClass) {
 	section.removeChild(temp);
 	section.removeChild(filterElemsByClass(section.children, childClass)[0]);
 	section.removeChild(filterElemsByTag(section.children, "br")[1]);
-	for (let e of d.gEBI("template-" + childClass + "-" + childType).children)
+	for (let e of Array.from(d.gEBI("template-" + childClass + "-" + childType).children))
 		section.insertBefore(e.cloneNode(true), section.children[section.childElementCount - 1]);
 	filterElemsByTag(section.children[section.childElementCount - 2].children, "button")[0]
 		.setAttribute("onclick", "removeSectionChild('" + sectionID + "', '" + childClass + "')");
@@ -123,7 +123,7 @@ var removeSectionChildIntern = function(sectionID, childClass) {
 	let section = d.gEBI(sectionID);
 	section.removeChild(filterElemsByClass(section.children, childClass)[0]);
 	section.insertBefore(document.createElement("br"), section.children[section.childElementCount - 2]);
-	for (let e of d.gEBI("template-" + childClass + "-add").children)
+	for (let e of Array.from(d.gEBI("template-" + childClass + "-add").children))
 		section.insertBefore(e.cloneNode(true), section.children[section.childElementCount - 2]);
 	section.children[section.childElementCount - 4]
 		.setAttribute("onclick", "addSectionChild('" + sectionID + "', '" + childClass + "')");
