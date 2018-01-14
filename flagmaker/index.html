@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<main id="view"></main>
-		<aside><header>Goal: <strike>allow the flags of every UN member and observer state to be made</strike> make a flag of Earth.</header><fieldset id="opts">
+		<aside><fieldset id="opts">
 
 			<label>Aspect ratio (width–length): <select name="aspect">
 				<option selected value="3-5">3:5</option>
@@ -106,12 +106,22 @@
 						<option value="3-2">3:2</option>
 						<option value="4-1">4:1</option>
 					</optgroup>
-				</select></label><br>
+				</select></label>
+				<fieldset class="band" data-vexorder="1">
+					<legend>Upper band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="2">
+					<legend>Lower band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
 			</fieldset>
 
 			<fieldset hidden id="h-triband"><legend>Fess / Horizontal triband</legend>
 				<label>Band ratio: <select name="h-triband-ratio">
-					<option selected value="1-1">1:1:1</option>
+					<option selected value="1-1-1">1:1:1</option>
 					<optgroup label="quarters">
 						<option value="1-1-2">1:1:2</option>
 						<option value="1-2-1">1:2:1</option>
@@ -119,25 +129,154 @@
 					</optgroup>
 					<optgroup label="fifths">
 						<option value="1-1-3">1:1:3</option>
-						<option value="1-3-3">1:3:1</option>
+						<option value="1-3-1">1:3:1</option>
 						<option value="3-1-1">3:1:1</option>
 						<option value="2-2-1">2:2:1</option>
 						<option value="2-1-2">2:1:2</option>
 						<option value="1-2-2">1:2:2</option>
 					</optgroup>
-				</select></label><br>
+				</select></label>
+				<fieldset class="band" data-vexorder="1">
+					<legend>Upper band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="2">
+					<legend>Center band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="3">
+					<legend>Lower band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
 			</fieldset>
 
 			<fieldset hidden id="h-tetraband"><legend>Horizontal tetraband</legend>
+				<input disabled hidden name="h-tetraband-ratio" type="text" value="1-1-1-1">
+				<fieldset class="band" data-vexorder="1">
+					<legend>Upper band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="2">
+					<legend>Upper-mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="3">
+					<legend>Lower-mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="4">
+					<legend>Lower band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
 			</fieldset>
 
 			<fieldset hidden id="h-pentaband"><legend>Horizontal pentaband</legend>
+				<input disabled hidden name="h-pentaband-ratio" type="text" value="1-1-1-1-1">
+				<fieldset class="band" data-vexorder="1">
+					<legend>Upper band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="2">
+					<legend>Upper-mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="3">
+					<legend>Mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="4">
+					<legend>Lower-mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="5">
+					<legend>Lower band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
 			</fieldset>
 
 			<fieldset hidden id="h-hexaband"><legend>Horizontal hexaband</legend>
+				<input disabled hidden name="h-hexaband-ratio" type="text" value="1-1-1-1-1-1">
+				<fieldset class="band" data-vexorder="1">
+					<legend>Upper band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="2">
+					<legend>Near-upper band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="3">
+					<legend>Upper-mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="4">
+					<legend>Lower-mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="5">
+					<legend>Near-lower band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="6">
+					<legend>Lower band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
 			</fieldset>
 
 			<fieldset hidden id="h-heptaband"><legend>Horizontal heptaband</legend>
+				<input disabled hidden name="h-heptaband-ratio" type="text" value="1-1-1-1-1-1-1">
+				<fieldset class="band" data-vexorder="1">
+					<legend>Upper band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="2">
+					<legend>Near-upper band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="3">
+					<legend>Upper-mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="4">
+					<legend>Mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="5">
+					<legend>Lower-mid band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="6">
+					<legend>Near-lower band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="7">
+					<legend>Lower band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
 			</fieldset>
 
 			<fieldset id="v-duoband"><legend>Vertical duoband</legend>
@@ -157,7 +296,7 @@
 						<option value="3-2">3:2</option>
 						<option value="4-1">4:1</option>
 					</optgroup>
-				</select></label><br>
+				</select></label>
 				<fieldset class="band" data-vexorder="1">
 					<legend>Hoist band</legend>
 					<label>Fill: <input name="fill" type="color" value="#003F7F"></label><br>
@@ -188,7 +327,7 @@
 
 			<fieldset hidden id="v-triband"><legend>Pale / Vertical triband</legend>
 				<label>Band ratio: <select name="v-triband-ratio">
-					<option selected value="1-1">1:1:1</option>
+					<option selected value="1-1-1">1:1:1</option>
 					<optgroup label="Quarters">
 						<option value="1-1-2">1:1:2</option>
 						<option value="1-2-1">1:2:1</option>
@@ -196,13 +335,13 @@
 					</optgroup>
 					<optgroup label="Fifths">
 						<option value="1-1-3">1:1:3</option>
-						<option value="1-3-3">1:3:1</option>
+						<option value="1-3-1">1:3:1</option>
 						<option value="3-1-1">3:1:1</option>
 						<option value="2-2-1">2:2:1</option>
 						<option value="2-1-2">2:1:2</option>
 						<option value="1-2-2">1:2:2</option>
 					</optgroup>
-				</select></label><br>
+				</select></label>
 				<fieldset class="band" data-vexorder="1">
 					<legend>Hoist band</legend>
 					<label>Fill: <input name="fill" type="color"></label><br>
@@ -221,6 +360,27 @@
 			</fieldset>
 
 			<fieldset hidden id="v-tetraband"><legend>Vertical tetraband</legend>
+				<input disabled hidden name="v-tetraband-ratio" type="text" value="1-1-1-1">
+				<fieldset class="band" data-vexorder="1">
+					<legend>Hoist band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="2">
+					<legend>Near-hoist band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="3">
+					<legend>Near-fly band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
+				<fieldset class="band" data-vexorder="4">
+					<legend>Fly band</legend>
+					<label>Fill: <input name="fill" type="color"></label><br>
+					<button data-vexaction="add-charge" type="button">Add charge</button>
+				</fieldset>
 			</fieldset>
 
 			<fieldset hidden id="bordure"><legend>Bordure</legend>
@@ -266,12 +426,16 @@
 
 			<fieldset id="randomize"><legend>Randomize</legend>
 				<label>Also change primary design: <input name="randomize-design" type="checkbox"></label><br>
+				<label>Also reroll overlay patterns: <input name="randomize-reroll-extras" type="checkbox"></label><br>
+				<label>Also change selected overlay patterns: <input checked name="randomize-current-extras" type="checkbox"></label><br>
 				<label>Only use "flag colours": <input checked name="randomize-limit-colours" type="checkbox"></label><br>
 				<button id="randomize-button" onclick="randomizeAll()" onmouseover="randomizeButton()" onmouseout="randomizeButton()" type="button"></button>
 			</fieldset>
 
+			<br><hr><header>Goal: <strike>allow the flags of every UN member and observer state to be made</strike> make a flag of Earth.</header>
 		</fieldset></aside>
 		<footer hidden>
+
 			<div id="template-canton-content-add">
 				<button class="canton-content" type="button">Set canton type to:</button>
 				<select name="canton-content-type">
@@ -322,22 +486,17 @@
 					<label>Fill: <input name="fill" type="color"></label>
 				</fieldset>
 			</div>
+
 		</footer>
-
 		<script>
-		for (let tag of ["input", "select"]) for (let e of d.gEBT(tag)) {
-			e.onchange = updateView;
-			e.onclick = updateView;
-			e.onkeyup = updateView;
-		}
-		let design = d.gEBN("design")[0];
-		design.onchange = updateDesign;
-		design.onclick = updateDesign;
-		design.onkeyup = updateDesign;
-
-		randomizeButton();
-		removeSectionChildIntern("canton", "canton-content");
-		updateView();
+			for (let l of ["onchange", "onclick", "onkeyup"]) {
+				for (let tag of ["input", "select"]) for (let e of Array.from(d.gEBT(tag)))
+					e.setAttribute(l, "updateView()");
+				d.gEBN("design")[0].setAttribute(l, "updateDesign()");
+			}
+			randomizeButton();
+			removeSectionChildIntern("canton", "canton-content");
+			updateDesign();
 		</script>
 	</body>
 </html>

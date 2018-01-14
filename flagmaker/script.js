@@ -32,9 +32,11 @@ var designs = [
 	"bars", "h-duoband", "h-triband", "h-tetraband", "h-pentaband", "h-hexaband", "h-heptaband",
 	"v-duoband", "v-triband", "v-tetraband"
 ];
+var extras = ["bordure", "canton", "chevron", "frame"];
 
 var colourParts = ["00"];
-for (let n of [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"]) colourParts.push(n + "F");
+for (let n = 1; n < 10; n++) colourParts.push(n + "F");
+for (let n of ["A", "B", "C", "D", "E", "F"]) colourParts.push(n + "F");
 var simpleColours = [
 	"000000", "FFFFFF", // Grayscale
 	"CF0000", // Reds
@@ -44,13 +46,15 @@ var simpleColours = [
 	"1F006F" // Blues
 ];
 var randomSimpleColour = function() {return simpleColours[~~(Math.random() * simpleColours.length)];};
+var randomColour = function() {return colourParts[~~(Math.random() * 16)];};
+
 var randomizeInput = function(e, randColour) {
 	switch (e.type) {
 		case "checkbox":
-			return e.checked = Math.random() < 0.5 ? true : false;
+			return e.checked = Math.random() < 0.5;
 		case "color":
 			return setValue(e, "#" + (randColour
-					? colourParts[~~(Math.random() * 16)] + colourParts[~~(Math.random() * 16)] + colourParts[~~(Math.random() * 16)]
+					? randomColour() + randomColour() + randomColour()
 					: randomSimpleColour()
 				));
 		case "number":
@@ -71,16 +75,22 @@ var randomizeRecursively = function(p, randColour) {
 	}
 };
 var randomizeAll = function() {
-	if (d.gEBN("randomize-design")[0].checked) d.gEBN("design")[0].value = designs[~~(Math.random() * designs.length)];
-	updateDesign();
+	if (d.gEBN("randomize-design")[0].checked)
+		d.gEBN("design")[0].value = designs[~~(Math.random() * designs.length)];
 	randomizeRecursively(d.gEBI(d.gEBN("design")[0].value));
-//TODO extras
-	updateView();
+	if (d.gEBN("randomize-reroll-extras")[0].checked)
+		for (let id of extras) d.gEBI(id).hidden = Math.random() < 0.5;
+	if (d.gEBN("randomize-current-extras")[0].checked)
+		for (let id of extras) if (!d.gEBI(id).hidden) randomizeRecursively(d.gEBI(id));
+	updateDesign();
 	randomizeButton();
 };
-var diceChars = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+
+var randomDie = function() {
+	return ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"][~~(Math.random() * 6)]
+};
 var randomizeButton = function() {
-	d.gEBI("randomize-button").innerHTML = diceChars[~~(Math.random() * 6)] + " Randomize " + diceChars[~~(Math.random() * 6)];
+	d.gEBI("randomize-button").innerHTML = randomDie() + " Randomize " + randomDie();
 };
 
 var showPattern = function() {
@@ -126,6 +136,44 @@ var removeSectionChild = function(sectionID, childClass) {
 var updateDesign = function() {
 	for (let id of designs) d.gEBI(id).hidden = true;
 	d.gEBI(d.gEBN("design")[0].value).hidden = false;
+	updateView();
+};
+
+var computeBandWidths = function(r, s) {
+	let bandWidths = r.split("-");
+	for (let i = 0; i < bandWidths.length; i++) bandWidths[i] = Number.parseInt(bandWidths[i]);
+	let sum = bandWidths.reduce((a,b)=>a+b);
+	for (let i = 0; i < bandWidths.length; i++) bandWidths[i] *= s / sum;
+	return bandWidths;
+	// bandWidths is now absolute width out of size[0] e.g. [200, 300] for 3:5 duoband, band ratio 2:3
+};
+var drawHBand = function(id, size, view) {
+	let bandHeights = computeBandWidths(d.gEBN(id + "-ratio")[0].value, size[1]);
+	for (let e of filterElemsByClass(d.gEBI(id).children, "band")) {
+		let attrs = {
+			width: size[0], height: bandHeights[e.dataset.vexorder - 1],
+			x: 0, y: 0,
+			fill: filterElemsByLabelledName(filterElemsByTag(e.children, "label"), "fill")[0]
+				.firstElementChild.value
+		};
+		if (e.dataset.vexorder > 1)
+			for (let i = 0; i < e.dataset.vexorder - 1; i++) attrs.y += bandHeights[i];
+		setAttrsOnSVGElem(view.appendChild(createSVGElement("rect")), attrs);
+	}
+};
+var drawVBand = function(id, size, view, ratio) {
+	let bandWidths = computeBandWidths(d.gEBN(id + "-ratio")[0].value, size[0]);
+	for (let e of filterElemsByClass(d.gEBI(id).children, "band")) {
+		let attrs = {
+			width: bandWidths[e.dataset.vexorder - 1], height: size[1],
+			x: 0, y: 0,
+			fill: filterElemsByLabelledName(filterElemsByTag(e.children, "label"), "fill")[0]
+				.firstElementChild.value
+		};
+		if (e.dataset.vexorder > 1)
+			for (let i = 0; i < e.dataset.vexorder - 1; i++) attrs.x += bandWidths[i];
+		setAttrsOnSVGElem(view.appendChild(createSVGElement("rect")), attrs);
+	}
 };
 
 var updateView = function() {
@@ -137,14 +185,13 @@ var updateView = function() {
 	view = view.appendChild(createSVGElement("svg"));
 	setAttrsOnSVGElem(view, {viewBox: "0 0 " + size[0] + " " + size[1]});
 	view.style.transform = false ? "scaleX(-1)" : null;
-	let newElem;
-	switch (d.gEBN("design")[0].value) {
+	let currentDesign = d.gEBN("design")[0].value;
+	switch (currentDesign) {
 
 		//<circle cx="250" cy="150" r="150" stroke="green" stroke-width="4" fill="yellow" />
 		case "field":
 			setAttrsOnSVGElem(view.appendChild(createSVGElement("rect")), {
 				width: size[0], height: size[1],
-				x: 0, y: 0,
 				fill: filterElemsByLabelledName(filterElemsByTag(d.gEBI("field").children, "label"), "fill")[0]
 					.firstElementChild.value
 			});
@@ -182,46 +229,18 @@ var updateView = function() {
 			break;
 
 		case "v-duoband":
-			let bandWidths = d.gEBN("v-duoband-ratio")[0].value.split("-");
-			for (let i = 0; i < bandWidths.length; i++) bandWidths[i] = Number.parseInt(bandWidths[i]);
-			let sum = bandWidths.reduce((a,b)=>a+b);
-			for (let i = 0; i < bandWidths.length; i++) bandWidths[i] *= size[0] / sum;
-			//bandWidths is now absolute width out of size[0] e.g. [200, 300] for 3:5, band ratio 2:3
-			for (let e of filterElemsByClass(d.gEBI("v-duoband").children, "band")) {
-				let attrs = {
-					width: bandWidths[e.dataset.vexorder - 1], height: size[1],
-					x: 0, y: 0,
-					fill: filterElemsByLabelledName(filterElemsByTag(e.children, "label"), "fill")[0]
-						.firstElementChild.value
-				};
-				if (e.dataset.vexorder > 1)
-					for (let i = 0; i < e.dataset.vexorder - 1; i++) attrs.x += bandWidths[i];
-				setAttrsOnSVGElem(view.appendChild(createSVGElement("rect")), attrs);
-			}
-			break;
-
 		case "v-triband":
-			break;
-
 		case "v-tetraband":
+			drawVBand(currentDesign, size, view);
 			break;
 
 		case "h-duoband":
-			break;
-
 		case "h-triband":
-			break;
-
 		case "h-tetraband":
-			break;
-
 		case "h-pentaband":
-			break;
-
 		case "h-hexaband":
-			break;
-
 		case "h-heptaband": // Blame Zimbabwe.
+			drawHBand(currentDesign, size, view);
 			break;
 	}
 
