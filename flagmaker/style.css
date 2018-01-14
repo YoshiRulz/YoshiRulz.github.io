@@ -1,6 +1,9 @@
 * {
 	font-family: "Noto Sans", Calibri, sans-serif;
 }
+button {
+	font-size: inherit;
+}
 input[type=checkbox], input[type=color] {
 	border: none;
 	padding: 0;
