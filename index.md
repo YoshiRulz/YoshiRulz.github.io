@@ -8,6 +8,7 @@ GitHub Repo | Description | [BCH rating](https://bettercodehub.com/)
 [Circulyr compiler](https://github.com/YoshiRulz/circulyrc) | "Compiler" for a new type of markdown for song lyrics, Circulyr | N/A (unfinished)
 [JTysh](https://github.com/YoshiRulz/JTysh) | An attempt at a (backwards-incompatible) Java shell | ![BCH compliance](https://bettercodehub.com/edge/badge/YoshiRulz/JTysh?branch=master)
 [Nonsenseless Cybersec](https://yoshirulz.github.io/Nonsenseless-Cybersec/overview) | A "book" for those who don't know what cybersec means or that they're at risk | N/A (in Markdown)
+[OPUS](https://github.com/YoshiRulz/OPUS) | Java library for dimensional analysis, using typing for dimensionality | ![BCH compliance](https://bettercodehub.com/edge/badge/YoshiRulz/OPUS?branch=master)
 [*Rayman 2* TAS scripts](https://github.com/YoshiRulz/Rayman2-TAS-scripts) | I'm working towards a *Rayman 2* [TAS](http://tasvideos.org/WelcomeToTASVideos.html) (with [BizHawk](https://github.com/TASVideos/BizHawk)) | N/A (in Lua)
 [RTysh](https://github.com/YoshiRulz/RTysh) | A replacement Unix shell built on Ruby's REPL env, `irb`. | ![BCH compliance](https://bettercodehub.com/edge/badge/YoshiRulz/RTysh?branch=master)
 
@@ -45,7 +46,7 @@ User/Group | GitHub Repo | Description
 
 # Wisdom of the Ancients
 ***
-"*Some people have told me they don't think a fat penguin really embodies the grace of Linux, which just tells me they have never seen an angry penguin charging at them in excess of [160 km/h]. They'd be a lot more careful about what they say if they had.*" — Linus Torvalds
+"*Think about this; think about how stupid the average person is, and then realize that half of 'em are stupider than that.*" — George Carlin
 
 ## on The Energy Revolution 
 ***
@@ -58,6 +59,8 @@ User/Group | GitHub Repo | Description
 "*Your most unhappy customers are your greatest source of learning.*" — Bill Gates
 
 "*Nobody actually creates perfect code the first time around, except me. But there's only one of me.*" — Linus Torvalds
+
+"*Some people have told me they don't think a fat penguin really embodies the grace of Linux, which just tells me they have never seen an angry penguin charging at them in excess of [160 km/h]. They'd be a lot more careful about what they say if they had.*" — Linus Torvalds
 
 (In the metadata of [xkcd#378](https://xkcd.com/378)) "*Real programmers set the universal constants at the start such that the universe evolves to contain the disk with the data they want.*" — Randall Monroe
 
